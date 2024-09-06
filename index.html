@@ -100,9 +100,20 @@
             align-items: center;
             /* 垂直居中对齐（如果需要） */
             padding: 20px;
+            background-color: white;
+            /* 确保整个 modal-content 背景为白色 */
         }
 
-        .modal-content img {
+        .qr-wrapper {
+            background-color: white;
+            /* 白色背景确保二维码区域填充 */
+            padding: 20px;
+            /* 给二维码周围增加足够的白色空间 */
+            box-sizing: border-box;
+            /* 确保 padding 不影响布局 */
+        }
+
+        .qr-wrapper img {
             width: 100%;
             height: auto;
             background-color: white;
@@ -237,7 +248,9 @@
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <div class="modal-content">
-            <img id="modalImage" src="">
+            <div class="qr-wrapper">
+                <img id="modalImage" src="">
+            </div>
         </div>
     </div>
 
